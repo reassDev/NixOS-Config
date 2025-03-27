@@ -15,6 +15,15 @@
   boot.loader.grub.device = "/dev/sda";
   boot.loader.grub.useOSProber = true;
 
+  # Automatic Updating
+  system.autoUpgrade.enable = true;
+  system.autoUpgrade.dates = "weekly";
+
+  # Automatic Cleanup
+  nix.gc.automatic = true;
+  nix.gc.dates = "daily";
+  nix.gc.options = "--delete-older-than 10d";
+
   networking.hostName = "reass-NixOS"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -89,6 +98,14 @@
     packages = with pkgs; [
       git
       gh
+      vivaldi
+      discord
+      spotify
+      kando
+      jetbrains-toolbox
+      vscodium
+      prismlauncher
+      obsidian
     ];
   };
 
