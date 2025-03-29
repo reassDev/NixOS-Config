@@ -37,4 +37,13 @@
     LC_TELEPHONE = "da_DK.UTF-8";
     LC_TIME = "da_DK.UTF-8";
   };
+  
+  # Configure keymap in X11
+  services.xserver.xkb = {
+    layout = "dk";
+    variant = "nodeadkeys";
+  };
+
+  # Configure console keymap
+  console.keyMap = "dk-latin1";
 }

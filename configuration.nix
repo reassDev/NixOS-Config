@@ -12,32 +12,12 @@
       ./automatic.nix
       ./localeAndNetworking.nix
       ./users.nix
+      ./bootloaderAndDesktopEnvironment.nix
     ];
   
   # Enable flakes and nix-command
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
-  # Bootloader.
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/sda";
-  boot.loader.grub.useOSProber = true;
-
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-
-  # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
-
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "dk";
-    variant = "nodeadkeys";
-  };
-
-  # Configure console keymap
-  console.keyMap = "dk-latin1";
-
+  
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
