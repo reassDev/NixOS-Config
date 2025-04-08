@@ -13,6 +13,7 @@
       ./localeAndNetworking.nix
       ./users.nix
       ./bootloaderAndDesktopEnvironment.nix
+      ./nvidia.nix
     ];
   
   # Enable flakes and nix-command
