@@ -7,11 +7,18 @@
   programs.hyprland = {
     enable = true;
     xwayland.enable = true;
+    configFile = ./configs/hyprland.conf;
+    extraConfig = ''
+      bind = SUPER + RETURN, exec, kitty
+      bind = SUPER + Q, exec, killactivewindow
+    '';
   };
 
-  services.getty.autoLogin.enable = true;
-  services.getty.autoLogin.user = "reass";
-  services.getty.defaultUser = "reass";
+  services.getty = {
+    autoLogin.enable = true;
+    autoLogin.user = "reass";
+    defaultUser = "reass";
+  };
 
   environment.systemPackages = with pkgs; [
     hyprland
@@ -28,11 +35,15 @@
     xdg-utils
     xdg-desktop-portal
     xdg-desktop-portal-hyprland
-    grim slurp swappy
+    grim
+    slurp
+    swappy
   ];
 
   environment.sessionVariables = {
     WLR_NO_HARDWARE_CURSORS = "1";
     NIXOS_OZONE_WL = "1";
+    XDG_CURRENT_DESKTOP = "Hyprland";
   };
+
 }
