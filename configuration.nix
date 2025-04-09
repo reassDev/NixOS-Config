@@ -14,7 +14,12 @@
       ./users.nix
       ./bootloaderAndDesktopEnvironment.nix
       ./nvidia.nix
+      ./hyprland.nix
+      <home-manager/nixos>
     ];
+  
+  # Adds home manager from ./home.nix
+  home-manager.users.reass = import ./home.nix;
   
   # Enable flakes and nix-command
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
