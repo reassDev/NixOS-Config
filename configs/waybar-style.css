@@ -1,0 +1,27 @@
+/* Waybar Global Style */
+* {
+  font-family: "Fira Code", monospace;
+  color: #ECEFF4;
+  background: transparent;
+}
+
+/* Center the clock and increase its size */
+#clock {
+  font-size: 16px;
+  padding: 0 12px;
+}
+
+/* Style for workspaces */
+#sway-workspaces {
+  font-size: 14px;
+}
+
+/* Tray icons and spacing */
+#tray {
+  margin-right: 10px;
+}
+
+/* Add subtle borders or shadows */
+#window, #battery, #network {
+  padding: 0 6px;
+}
