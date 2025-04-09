@@ -19,7 +19,7 @@
     ];
   
   # Adds home manager from ./home.nix
-  home-manager.users.reass = import ./home.nix;
+  home-manager.users.reass = ./home.nix;
   
   # Enable flakes and nix-command
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -35,6 +35,24 @@
   environment.systemPackages = with pkgs; [
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
+    hyprland
+    hyprpaper
+    waybar
+    kitty
+    nwg-look
+    rofi-wayland
+    pavucontrol
+    brightnessctl
+    wl-clipboard
+    xdg-utils
+    xdg-desktop-portal
+    xdg-desktop-portal-hyprland
+    grim
+    slurp
+    swappy
+    swww
+    egl-wayland
+    nvidia-vaapi-driver
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

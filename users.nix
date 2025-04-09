@@ -17,6 +17,7 @@
       vscodium
       prismlauncher
       obsidian
+      home-manager
     ];
   };
 }
