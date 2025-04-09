@@ -1,24 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  services.xserver.enable = false;
-  services.displayManager.gdm.enable = false;
-
-  programs.hyprland = {
-    enable = true;
-    xwayland.enable = true;
-    configFile = ./configs/hyprland.conf;
-    extraConfig = ''
-      bind = SUPER + RETURN, exec, kitty
-      bind = SUPER + Q, exec, killactivewindow
-    '';
-  };
-
-  services.getty = {
-    autoLogin.enable = true;
-    autoLogin.user = "reass";
-    defaultUser = "reass";
-  };
+  programs.hyprland.xwayland.enable = true;
 
   environment.systemPackages = with pkgs; [
     hyprland
@@ -39,6 +22,8 @@
     slurp
     swappy
   ];
+  
+  
 
   environment.sessionVariables = {
     WLR_NO_HARDWARE_CURSORS = "1";
