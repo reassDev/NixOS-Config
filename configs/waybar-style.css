@@ -1,27 +1,161 @@
-/* Waybar Global Style */
 * {
-  font-family: "Fira Code", monospace;
-  color: #ECEFF4;
-  background: transparent;
-}
-
-/* Center the clock and increase its size */
-#clock {
+  border-radius: 20px;
+  font-family: "Iosevka Nerd Font", sans-serif;
   font-size: 16px;
-  padding: 0 12px;
+  min-height: 0;
 }
 
-/* Style for workspaces */
-#sway-workspaces {
-  font-size: 14px;
+window#waybar {
+  background-color: #1e1e2e;
+  color: #f8f8f2;
+  border: none;
+  opacity: 0.95;
+  padding: 6px 12px;
+  margin: 6px;
 }
 
-/* Tray icons and spacing */
+window#waybar.hidden {
+  opacity: 0.5;
+}
+
+#workspaces,
+#mode,
+#cpu,
+#memory,
+#temperature,
+#custom-media,
+#clock,
+#language,
+#pulseaudio,
+#backlight,
+#battery,
+#network,
 #tray {
-  margin-right: 10px;
+  background-color: #2e2e3e;
+  padding: 4px 12px;
+  margin: 4px 6px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  background-clip: padding-box;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
 }
 
-/* Add subtle borders or shadows */
-#window, #battery, #network {
-  padding: 0 6px;
+/* Workspaces */
+#workspaces button {
+  color: #f38ba8;
+  padding: 0 8px;
+  margin: 0 4px;
+  background: transparent;
+  border-radius: 15px;
+}
+
+#workspaces button.focused {
+  background-color: #f38ba8;
+  color: #1e1e2e;
+}
+
+#workspaces button.urgent {
+  background-color: #e06c75;
+  color: #1e1e2e;
+}
+
+/* Clock */
+#clock {
+  font-weight: bold;
+  color: #f38ba8;
+}
+
+/* Media module */
+#custom-media {
+  background-color: #f38ba8;
+  color: #1e1e2e;
+}
+
+/* Audio */
+#pulseaudio {
+  color: #f38ba8;
+}
+#pulseaudio.muted {
+  background-color: #e06c75;
+  color: #1e1e2e;
+}
+
+/* CPU and memory */
+#cpu {
+  color: #d08770;
+}
+#memory {
+  color: #b48ead;
+}
+
+#custom-swaync {
+  color: #ECEFF4;
+  background-color: #2E3440;
+  padding: 0 10px;
+  border-radius: 25px;
+  margin: 2px 4px;
+}
+#custom-swaync.critical {
+  color: #BF616A;
+}
+#custom-swaync.low {
+  color: #A3BE8C;
+}
+
+/* Temp */
+#temperature {
+  color: #f38ba8;
+}
+#temperature.critical {
+  background-color: #e06c75;
+  color: #1e1e2e;
+}
+
+/* Network */
+#network {
+  color: #f38ba8;
+}
+#network.disconnected {
+  background-color: #e06c75;
+  color: #1e1e2e;
+}
+
+/* Battery */
+#battery {
+  color: #a3be8c;
+}
+#battery.charging, #battery.plugged {
+  background-color: #a3be8c;
+  color: #1e1e2e;
+}
+
+#battery.critical:not(.charging) {
+  background-color: #e06c75;
+  color: #1e1e2e;
+  animation: blink 0.5s linear infinite alternate;
+}
+
+@keyframes blink {
+  to {
+    background-color: #1e1e2e;
+    color: #e06c75;
+  }
+}
+
+/* Tray spacing */
+#tray > .widget {
+  margin: 0 4px;
+}
+
+/* Hover effect */
+#cpu:hover,
+#memory:hover,
+#temperature:hover,
+#network:hover,
+#pulseaudio:hover,
+#battery:hover,
+#tray:hover,
+#clock:hover {
+  background-color: rgba(255, 255, 255, 0.05);
 }

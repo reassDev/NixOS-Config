@@ -1,0 +1,22 @@
+* {
+    font-family: "Iosevka Nerd Font", sans-serif;
+    font-size: 14px;
+    color: #ECEFF4;
+}
+window {
+    background-color: rgba(46, 52, 64, 0.9);
+    border-radius: 10px;
+    border: 1px solid #4C566A;
+}
+.notification {
+    background-color: #3B4252;
+    border-radius: 8px;
+    margin: 5px;
+    padding: 10px;
+}
+.notification.critical {
+    background-color: #BF616A;
+}
+.notification.low {
+    background-color: #A3BE8C;
+}

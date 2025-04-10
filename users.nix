@@ -18,6 +18,10 @@
       prismlauncher
       obsidian
       home-manager
+      fastfetch
+      playerctl
+      python314
+      nvtop
     ];
   };
 }

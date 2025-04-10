@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ lib, config, pkgs, ... }:
 
 {
   imports =
@@ -43,7 +43,7 @@
     rofi-wayland
     pavucontrol
     brightnessctl
-    wl-clipboard
+    swaynotificationcenter
     xdg-utils
     xdg-desktop-portal
     xdg-desktop-portal-hyprland
