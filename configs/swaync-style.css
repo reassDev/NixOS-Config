@@ -15,7 +15,7 @@ window {
     padding: 10px;
 }
 .notification.critical {
-    background-color: #BF616A;
+    background-color: #d0081c;
 }
 .notification.low {
     background-color: #A3BE8C;

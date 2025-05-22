@@ -20,8 +20,8 @@
       home-manager
       fastfetch
       playerctl
-      python314
-      nvtop
+      nvtopPackages.full
+      alacritty
     ];
   };
 }

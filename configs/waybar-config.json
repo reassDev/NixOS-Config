@@ -105,18 +105,6 @@
       "on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
       "on-click-middle": "pavucontrol"
   },
-  "custom/media": {
-      "format": "{icon} {}",
-      "return-type": "json",
-      "max-length": 150,
-      "format-icons": {
-          "spotify": " ",
-          "default": " "
-      },
-      "escape": true,
-      "exec": "/etc/nixos/configs/mediaplayer.py 2> /dev/null",
-      "on-click": "playerctl play-pause"
-  },
   "custom/swaync": {
     "format": " {}",
     "return-type": "json",

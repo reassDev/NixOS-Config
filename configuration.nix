@@ -38,7 +38,6 @@
     hyprland
     hyprpaper
     waybar
-    kitty
     nwg-look
     rofi-wayland
     pavucontrol
