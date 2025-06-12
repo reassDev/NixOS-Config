@@ -15,7 +15,6 @@
       ./bootloaderAndDesktopEnvironment.nix
       ./nvidia.nix
       ./hyprland.nix
-      <home-manager/nixos>
     ];
   
   # Adds home manager from ./home.nix
