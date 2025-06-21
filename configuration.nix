@@ -51,6 +51,7 @@
     swww
     egl-wayland
     nvidia-vaapi-driver
+    wf-recorder
   ];
 
   fonts.packages = with pkgs; [
