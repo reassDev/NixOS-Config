@@ -11,14 +11,6 @@
     nixosConfigurations.reassOS = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
-        ./hardware-configuration.nix
-        ./audioAndPrinting.nix
-	./automatic.nix
-	./localeAndNetworking.nix
-	./users.nix
-	./bootloaderAndDesktopEnvironment.nix
-	./nvidia.nix
-	./hyprland.nix
         ./configuration.nix
         home-manager.nixosModules.home-manager
       ];
