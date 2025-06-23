@@ -12,6 +12,7 @@
     fi
   '';
 
-  xdg.configFile."hyprland.conf".source = ./configs/hyprland.conf;
+  xdg.configFile."hyprland.conf".source = builtins.path { path = ./configs/hyprland.conf; };
   xdg.configFile."alacritty/alacritty.toml".source = builtins.path { path = ./configs/alacritty.toml; };
+  xdg.configFile."fastfetch/config.jsonc".source = builtins.path { path = ./configs/fastfetch.jsonc; };
  }
