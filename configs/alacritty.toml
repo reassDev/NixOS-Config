@@ -1,0 +1,58 @@
+[window]
+padding = { x = 10, y = 10 }
+dynamic_padding = true
+decorations = "full"
+opacity = 0.94
+blur = true
+title = "Alacritty"
+
+[font]
+normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
+bold = { family = "JetBrainsMono Nerd Font", style = "Bold" }
+italic = { family = "JetBrainsMono Nerd Font", style = "Italic" }
+size = 12.5
+builtin_box_drawing = true
+glyph_offset = { x = 0, y = 1 }
+
+[colors.primary]
+background = "#1e1e1e"
+foreground = "#e6e6e6"
+
+[colors.cursor]
+text = "#1e1e1e"
+cursor = "#ff5555"
+
+[colors.selection]
+text = "#1e1e1e"
+background = "#e6e6e6"
+
+[colors.normal]
+black   = "#2a2a2a"
+red     = "#ff5555"
+green   = "#88c0d0"
+yellow  = "#f1fa8c"
+blue    = "#6272a4"
+magenta = "#bd93f9"
+cyan    = "#8be9fd"
+white   = "#d0d0d0"
+
+[colors.bright]
+black   = "#3f3f3f"
+red     = "#ff6e6e"
+green   = "#a4dbe9"
+yellow  = "#ffffa5"
+blue    = "#7082c9"
+magenta = "#caa9fa"
+cyan    = "#a4ffff"
+white   = "#f5f5f5"
+
+[cursor]
+style = { shape = "Block", blinking = "On" }
+blink_interval = 500
+unfocused_hollow = true
+
+[selection]
+save_to_clipboard = true
+
+[env]
+TERM = "xterm-256color"

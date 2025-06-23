@@ -13,5 +13,5 @@
   '';
 
   xdg.configFile."hyprland.conf".source = ./configs/hyprland.conf;
-  xdg.configFile."kitty/kitty.conf".source = builtins.path { path = ./configs/kitty.conf; };
+  xdg.configFile."alacritty/alacritty.toml".source = builtins.path { path = ./configs/alacritty.toml; };
  }
